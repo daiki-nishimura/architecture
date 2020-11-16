@@ -1,0 +1,19 @@
+@startuml DomainModel
+left to right direction
+hide circle
+hide methods
+
+package DomainModel {
+    class 状態 #F5A9BC
+    class 機能 #F5A9BC
+
+    mix_actor 利用者 
+    mix_actor ユーザー
+
+    利用者 --> 状態
+    ユーザー --> 機能
+    状態 o--> 日常生活
+    機能 o--> 日常生活記録
+    日常生活 - 日常生活記録
+}
+@enduml
